@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2500+ Google Fonts Preview & Copy</title>
+<style>
+  body { font-family: Arial, sans-serif; padding:20px; }
+  .font-sample { margin-bottom:15px; font-size:24px; }
+  .font-name { font-weight:bold; margin-bottom:5px; }
+  .copy-btn { margin-left:10px; padding:3px 6px; font-size:14px; cursor:pointer; }
+  #nextBtn { padding:8px 12px; font-size:16px; cursor:pointer; margin-top:10px; }
+</style>
+</head>
+<body>
+
+<h2>2500+ Google Fonts Preview & Copy</h2>
+
+<input type="text" id="textInput" placeholder="Enter text" style="padding:5px; width:300px; margin-bottom:10px;">
+<div id="previewContainer"></div>
+<button id="nextBtn" onclick="loadNextBatch()">Next Page</button>
+
+<script>
+// Fonts array placeholder: Replace this with your full 2500+ font names
+const fonts = [
+  "Abhaya Libre","Anek Bangla","Anek Devanagari","Anek Gujarati","Anek Gurmukhi",
+  "Anek Kannada","Anek Latin","Anek Malayalam","Anek Odia","Anek Tamil","Anek Telugu",
+  "Anuphan","Anton","Antonio","Arapey","Arbutus","Arbutus Slab","Architects Daughter",
+  "Archivo Black","Archivo Narrow","Arima Madurai","Arimo","Arizonia","Armata","Artifika",
+  "Arvo","Arya","Asap","Asar","Asset","Assistant","Astloch","Asul","Athiti","Atma",
+  "Atomic Age","Aubrey","Audiowide","Autour One","Average","Average Sans"
+  // Add remaining fonts up to 2500+ here...
+];
+
+let batch = 0;
+const batchSize = 100; // 100 fonts per batch
+const loadedFonts = new Set();
+
+// Load Google Font dynamically
+function loadGoogleFont(fontName) {
+  if (!loadedFonts.has(fontName)) {
+    loadedFonts.add(fontName);
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `https://fonts.googleapis.com/css2?family=${fontName.replace(/ /g,'+')}&display=swap`;
+    document.head.appendChild(link);
+  }
+}
+
+// Create font preview
+function createPreview(font, text) {
+  const container = document.getElementById('previewContainer');
+  const div = document.createElement('div');
+  div.className = 'font-sample';
+  div.style.fontFamily = font;
+
+  const fontNameDiv = document.createElement('div');
+  fontNameDiv.className = 'font-name';
+  fontNameDiv.textContent = font;
+
+  const textSpan = document.createElement('span');
+  textSpan.textContent = text;
+
+  const copyBtn = document.createElement('button');
+  copyBtn.className = 'copy-btn';
+  copyBtn.textContent = 'Copy';
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(textSpan.textContent)
+      .then(()=>alert('Copied: '+textSpan.textContent))
+      .catch(err=>alert('Failed to copy: '+err));
+  };
+
+  div.appendChild(fontNameDiv);
+  div.appendChild(textSpan);
+  div.appendChild(copyBtn);
+  container.appendChild(div);
+}
+
+// Load next batch of fonts
+function loadNextBatch() {
+  const text = document.getElementById('textInput').value || 'Test Text';
+  const start = batch * batchSize;
+  const end = start + batchSize;
+  const fontsBatch = fonts.slice(start, end);
+
+  fontsBatch.forEach(f => {
+    loadGoogleFont(f);
+    createPreview(f,text);
+  });
+
+  batch++;
+
+  // Hide Next Page button if all fonts loaded
+  if(batch*batchSize >= fonts.length) {
+    document.getElementById('nextBtn').style.display = 'none';
+  }
+}
+</script>
+
+</body>
+</html>
