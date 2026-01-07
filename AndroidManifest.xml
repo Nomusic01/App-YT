@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" android:requiredSplitTypes="base__abi,base__density" android:splitTypes="" android:versionCode="90000192" android:versionName="92.0" package="calc.gallery.lock" platformBuildVersionCode="36" platformBuildVersionName="16">
+	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36" />
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.REORDER_TASKS" />
+	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+	<uses-permission android:maxSdkVersion="29" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.MAIN" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="https" />
+		</intent>
+		<intent>
+			<action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+		</intent>
+		<intent>
+			<action android:name="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<category android:name="android.intent.category.BROWSABLE" />
+			<data android:scheme="https" />
+		</intent>
+		<intent>
+			<action android:name="android.support.customtabs.action.CustomTabsService" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.INSERT" />
+			<data android:mimeType="vnd.android.cursor.dir/event" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.VIEW" />
+			<data android:scheme="sms" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.DIAL" />
+			<data android:path="tel:" />
+		</intent>
+		<package android:name="com.facebook.katana" />
+	</queries>
+	<uses-permission android:name="android.permission.USE_BIOMETRIC" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="com.android.vending.BILLING" />
+	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+	<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+	<uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+	<uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+	<uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
+	<permission android:name="calc.gallery.lock.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
+	<uses-permission android:name="calc.gallery.lock.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+	<uses-feature android:name="android.hardware.camera.front" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+	<uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+	<uses-feature android:name="android.hardware.wifi" android:required="false" />
+	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:manageSpaceActivity="overlays.com.calculatorlib.UpdatedCalculatorActivity" android:name="calc.gallery.lock.utils.MainApplication" android:requestLegacyExternalStorage="true" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/Theme1" android:usesCleartextTraffic="true">
+		<meta-data android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED" android:value="false" />
+		<activity android:enabled="true" android:exported="true" android:icon="@mipmap/ic_launcher" android:launchMode="singleTask" android:name="overlays.com.calculatorlib.UpdatedCalculatorActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity-alias android:enabled="false" android:exported="true" android:icon="@drawable/scanner_dialog_logo" android:label="G-Scanner" android:name="calc.gallery.lock.UpdatedCalculatorActivity_scanner" android:targetActivity="overlays.com.calculatorlib.UpdatedCalculatorActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity-alias>
+		<activity android:exported="false" android:name="overlays.com.calculatorlib.CalculatorHistoryActivity" android:screenOrientation="portrait" android:theme="@style/CalculatorThemeMaterialDarkNoActionBar" />
+		<activity android:exported="false" android:label="" android:name="calc.gallery.lock.screens.AudioNotesInFilesScreen" android:screenOrientation="portrait" />
+		<meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION" android:value="true" />
+		<meta-data android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING" android:value="true" />
+		<activity android:autoRemoveFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:enableOnBackInvokedCallback="false" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.gms.ads.AdActivity" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent" />
+		<activity android:autoRemoveFromRecents="true" android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.facebook.ads.AudienceNetworkActivity" android:noHistory="true" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.FindLostFilesActivity" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.calculator.HelpScreen" android:screenOrientation="portrait" />
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7610714198878210~9937792680" />
+		<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_in_app_notification" />
+		<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/colorAccent" />
+		<meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="Anonymous" />
+		<service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:foregroundServiceType="0x1" android:name="androidx.work.impl.foreground.SystemForegroundService" />
+		<service android:exported="false" android:name="calc.gallery.lock.utils.MyFirebaseMessagingService">
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<service android:enabled="true" android:exported="false" android:name="calc.gallery.lock.utils.UpgradeDBWorker" />
+		<service android:enabled="true" android:exported="false" android:name="calc.gallery.lock.wireless.handler.WirelessTransferService" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.ThemesScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:exported="false" android:name="calc.gallery.lock.web.BrowserVidPlayerScreen" />
+		<activity android:exported="true" android:name="calc.gallery.lock.screens.CloudConnectScreen" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="cloud" />
+				<data android:host="photokeepsafe.com" />
+			</intent-filter>
+		</activity>
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.FirstTimeStartScreen" android:screenOrientation="portrait" android:theme="@style/noAnimTheme" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.TrashScreen" android:screenOrientation="portrait" />
+		<activity android:exported="true" android:name="calc.gallery.lock.fileMigrate.LockerMigrationScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize|uiMode" android:exported="true" android:name="calc.gallery.lock.fileMigrate.send.SendFileScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="calc.gallery.lock.fileMigrate.FileMigrationSuccessScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize|uiMode" android:exported="true" android:name="calc.gallery.lock.fileMigrate.receive.ReceiveFileScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="layoutDirection|locale|orientation|screenSize|uiMode" android:exported="true" android:name="calc.gallery.lock.screens.ChooseLocaleScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.PicViewBrowserTrash" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:exported="false" android:name="calc.gallery.lock.web.IncogWebScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:exported="false" android:name="calc.gallery.lock.web.DownloadVideoScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:exported="false" android:name="calc.gallery.lock.screens.ScreenHowToDownload" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:exported="false" android:launchMode="singleInstance" android:name="calc.gallery.lock.web.TrueWebScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.web.WebRecents" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.CreateContactScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.CreateTextScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.AddAudioScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.AddOtherScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.DriveScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.wireless.WirelessScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:hardwareAccelerated="true" android:name="calc.gallery.lock.wireless.QRCodeScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:launchMode="singleTask" android:name="calc.gallery.lock.screens.InsertOldFilesScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.PrivacyWebScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.DecoyScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.ChangeIconScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.ScannerDemoActivity" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:launchMode="singleTask" android:name="calc.gallery.lock.screens.ForgotPassScreen" android:screenOrientation="portrait" android:taskAffinity="" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.PinSetScreen" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="false" android:name="calc.gallery.lock.screens.MovieWatchScreen" android:screenOrientation="fullSensor" />
+		<activity android:configChanges="orientation|screenSize" android:exported="false" android:name="calc.gallery.lock.screens.PhotosPreviewScreen" />
+		<activity android:configChanges="orientation|screenSize" android:exported="false" android:name="calc.gallery.lock.screens.FullPreviewPhotoScreen" />
+		<activity android:exported="true" android:name="calc.gallery.lock.screens.SubscribeScreen" android:screenOrientation="portrait" android:theme="@style/Theme.ProApp">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="premium" />
+				<data android:host="photokeepsafe.com" />
+			</intent-filter>
+		</activity>
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.PermissionScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.ImportMovieScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.ImportImagesScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.FolderOpenScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:launchMode="standard" android:name="calc.gallery.lock.screens.ViewAllScreen" android:screenOrientation="portrait" />
+		<activity android:exported="true" android:name="calc.gallery.lock.screens.AlbumsTypeScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.recovery.RecoveryPasswordScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.recovery.RetrievePasswordScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.recovery.PasswordPromptScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:launchMode="singleInstance" android:name="calc.gallery.lock.screens.MainScreen" android:screenOrientation="portrait" />
+		<activity android:exported="false" android:name="calc.gallery.lock.screens.DetailScreen" android:theme="@style/BigPreviewTheme" />
+		<activity android:autoRemoveFromRecents="true" android:excludeFromRecents="true" android:name="calc.gallery.lock.screens.SplashScreen" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/noAnimTheme" />
+		<activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:name="calc.gallery.lock.screens.SharingScreen" android:noHistory="true" android:taskAffinity="" android:theme="@style/ShareFromGalleryStyle">
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="image/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.SEND_MULTIPLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="image/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="video/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.SEND_MULTIPLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="video/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="audio/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.SEND_MULTIPLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="audio/*" />
+			</intent-filter>
+		</activity>
+		<provider android:authorities="calc.gallery.lock.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepath" />
+		</provider>
+		<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+		<activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent" />
+		<activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true" />
+		<receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+			</intent-filter>
+			<meta-data android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED" android:value="true" />
+		</receiver>
+		<service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+			<intent-filter android:priority="-500">
+				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<meta-data android:name="com.google.android.play.billingclient.version" android:value="8.2.1" />
+		<activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver" />
+		<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService" />
+		<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
+		<activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<provider android:authorities="calc.gallery.lock.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider" />
+		<service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService" />
+		<activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.OutOfContextTestingActivity" />
+		<activity android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:name="com.google.android.gms.ads.NotificationHandlerActivity" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<provider android:authorities="calc.gallery.lock.AudienceNetworkContentProvider" android:exported="false" android:name="com.facebook.ads.AudienceNetworkContentProvider" />
+		<provider android:authorities="calc.gallery.lock.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider" />
+		<provider android:authorities="calc.gallery.lock.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+			<meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup" />
+			<meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup" />
+			<meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup" />
+			<meta-data android:name="okhttp3.internal.platform.PlatformInitializer" android:value="androidx.startup" />
+			<meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup" />
+		</provider>
+		<service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
+		<receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" />
+		<receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP">
+			<intent-filter>
+				<action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+			</intent-filter>
+		</receiver>
+		<service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService" />
+		<uses-library android:name="android.ext.adservices" android:required="false" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="sensorLandscape" android:stateNotNeeded="true" android:theme="@style/zxing_CaptureTheme" android:windowSoftInputMode="stateAlwaysHidden" />
+		<service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+			<meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct" />
+		</service>
+		<receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+			<intent-filter>
+				<action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+			</intent-filter>
+		</receiver>
+		<service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" />
+		<receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" />
+		<activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent" />
+		<meta-data android:name="com.android.vending.splits.required" android:value="true" />
+		<meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store" />
+		<meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK" />
+		<meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0" />
+		<meta-data android:name="com.android.vending.derived.apk.id" android:value="3" />
+	</application>
+</manifest>
